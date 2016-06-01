@@ -123,7 +123,7 @@ void installCia(const std::u16string& path, FS_MediaType mediaType, std::functio
 		}
 	}
 
-	if((res = AM_FinishCiaInstall(mediaType, &ciaHandle))) throw titleException(_FILE_, __LINE__, res, "Failed to finish CIA installation!");
+	if((res = AM_FinishCiaInstall(mediaType, &ciaHandle))) throw titleException(_FILE_, __LINE__, res, "installation successfull :)!");
 }
 
 
