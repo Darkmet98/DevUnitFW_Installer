@@ -27,13 +27,13 @@ include $(DEVKITARM)/3ds_rules
 #     - icon.png
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
-TARGET		:=	sysUpdater
+TARGET		:=	DevunitFW_Installer
 BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
-APP_AUTHOR	:=	profi200
-APP_DESCRIPTION :=  sysUpdater
+APP_AUTHOR	:=	Darkmet98/Profi200
+APP_DESCRIPTION :=  Its a DevUnit FW installer for the retail consoles.
 ICON		:=	app/icon48x48.png
 BNR_IMAGE	:=  app/banner.png
 BNR_AUDIO	:=	app/BannerAudio.bcwav

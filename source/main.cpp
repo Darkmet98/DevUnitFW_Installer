@@ -154,7 +154,7 @@ void installUpdates(bool downgrade)
 			if((res = AM_GetCiaFileInfo(MEDIATYPE_NAND, &ciaFileInfo, f.getFileHandle()))) throw titleException(_FILE_, __LINE__, res, "Failed to get CIA file info!");
 
 			int cmpResult = versionCmp(installedTitles, ciaFileInfo.titleID, ciaFileInfo.version);
-			if((downgrade && cmpResult != 0) || (cmpResult > 0))
+			if((downgrade) || (cmpResult > 0))
 			{
 				installInfo.name = it.name;
 				installInfo.entry = ciaFileInfo;
@@ -196,10 +196,10 @@ int main()
 
 	consoleInit(GFX_TOP, NULL);
 
-	printf("sysUpdater 0.4.2b by profi200\n\n\n");
-	printf("(A) update\n(Y) downgrade\n(B) exit\n\n");
-	printf("Use the HOME button if you run the CIA version.\n");
-	printf("If you started the update you can't abort it!\n\n\n");
+	printf("DevUnit FW Installer 1.0 by Darkmet98\n\n\n");
+	printf("(A) update\n(Y) install\n(B) exit\n\n");
+	printf("Based on sysupdater by Profi200.\n");
+	printf("Make a backup for your NAND before the instalation\n\n\n");
 
 	while(aptMainLoop())
 	{
